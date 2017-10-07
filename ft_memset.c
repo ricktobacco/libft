@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memset(void *b, int c, size_t len)
 {
@@ -23,13 +22,4 @@ void	*ft_memset(void *b, int c, size_t len)
 	while (i < (int)len)
 		p[i++] = (unsigned char)c;
 	return (b);
-}
-
-void bs ( size_t t) {
-		printf("%dman m", (int)t);
-}
-
-int main ()
-{
-	bs(-42);
 }
