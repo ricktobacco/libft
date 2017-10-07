@@ -17,11 +17,11 @@ size_t	ft_strlcat(char *restrict dst, char *restrict src, size_t dstsize)
 	size_t dst_len;
 
 	dst_len = ft_strlen(dst);
-	if (dst_len < size)
+	if (dst_len < dstsize)
 	{
-		ft_strncat(dst, src, size - dst_len - 1);
+		ft_strncat(dst, src, dstsize - dst_len - 1);
 		return (dst_len + ft_strlen(src));
 	}
 	else
-		return (size + ft_strlen(src));
+		return (dstsize + ft_strlen(src));
 }
