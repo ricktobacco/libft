@@ -14,14 +14,14 @@
 
 size_t	ft_strlcat(char *restrict dst, char *restrict src, size_t dstsize)
 {
-    int		dst_size;
-    int		src_size;
-    int		i;
+    size_t	dst_size;
+    size_t	src_size;
+    size_t	i;
 
     src_size = 0;
     i = 0;
-    while (i < (int)dstsize && dst[i++])
-        dstsize--;
+    while (dstsize-- && dst[i])
+        i++;
     dstsize++;
     if (!dstsize)
         return (i + ft_strlen(src));
@@ -29,7 +29,7 @@ size_t	ft_strlcat(char *restrict dst, char *restrict src, size_t dstsize)
     i = 0;
     while (src[src_size])
     {
-        if ((int)dstsize > 1)
+        if (dstsize > 1)
         {
             dst[dst_size + i++] = src[src_size];
             dstsize--;
