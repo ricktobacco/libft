@@ -63,7 +63,7 @@ int					ft_tolower(int c);
 int					ft_toupper(int c);
 int					ft_atoi(const char *str);
 
-int					get_next_line(int const fd, char **line);
+int					ft_get_next_line(int const fd, char **line);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_strcmp(const char *s1, const char *s2);

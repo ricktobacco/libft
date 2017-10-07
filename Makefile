@@ -39,7 +39,7 @@ SRC = ./ft_lstnew.c \
 ./ft_tolower.c \
 ./ft_toupper.c \
 ./ft_atoi.c \
-./get_next_line.c \
+./ft_get_next_line.c \
 ./ft_memcmp.c \
 ./ft_strncmp.c \
 ./ft_strcmp.c \

@@ -14,9 +14,9 @@
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int 			i;
-	unsigned char	*m1;
-	unsigned char	*m2;
+	int					i;
+	unsigned char		*m1;
+	unsigned char		*m2;
 
 	if (!n)
 		return (0);
