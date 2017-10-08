@@ -31,7 +31,7 @@ static char		*ft_strrealloc(char *old_buf, size_t size)
 	return (new_buf);
 }
 
-int				fill_line(char **line, char *buffer)
+static int		fill_line(char **line, char *buffer)
 {
 	char	*tmp;
 	int		len;

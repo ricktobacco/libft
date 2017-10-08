@@ -21,17 +21,15 @@ static char	*ft_strndup(const char *s1, int n)
 {
 	char	*dst;
 	char	*p;
-	int		i;
 
-	i = 0;
-	dst = ft_strnew(ft_strlen(s1) + 1);
+	dst = ft_strnew(n);
 	if (!dst)
 		return (0);
 	p = dst;
-	while (*s1 && i < n)
+	while (*s1 && n > 0)
 	{
 		*p++ = *s1++;
-		i++;
+		l--;
 	}
 	*p = 0;
 	return (dst);

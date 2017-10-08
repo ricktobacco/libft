@@ -22,7 +22,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	csrc = (char *)src;
 	i = -1;
 	if (cdst > csrc)
-		while (++i < (int)len)
+		while ((int)len > 0)
 		{
 			*(cdst + len) = *(csrc + len);
 			len--;
