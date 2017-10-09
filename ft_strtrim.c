@@ -26,8 +26,11 @@ static char	*ft_strndup(const char *s1, int n)
 	if (!dst)
 		return (0);
 	p = dst;
-	while (*s1 && n-- > 0)
+	while (*s1 && n > 0)
+	{
 		*p++ = *s1++;
+		n--;
+	}
 	*p = 0;
 	return (dst);
 }
@@ -39,11 +42,14 @@ char		*ft_strtrim(char const *s)
 	if (!s)
 		return (NULL);
 	l = ft_strlen(s);
-	while (ws(s[l - 1]))
-		l--;
+	while (l > 0 && ws(s[l - 1]))
+		--l;
 	if (!l)
 		return (ft_strdup(""));
-	while (*s && ws(*s++))
+	while (*s && ws(*s))
+	{
+		s++;
 		l--;
+	}
 	return (ft_strndup(s, l));
 }
