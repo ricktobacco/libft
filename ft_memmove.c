@@ -22,11 +22,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	csrc = (char *)src;
 	i = -1;
 	if (cdst > csrc)
-		while ((int)len > 0)
-		{
+		while ((int)len-- > 0)
 			*(cdst + len) = *(csrc + len);
-			len--;
-		}
 	else
 		while (++i < (int)len)
 			*(cdst + i) = *(csrc + i);

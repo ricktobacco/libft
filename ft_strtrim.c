@@ -6,7 +6,7 @@
 /*   By: rtiutiun <rtiutiun@42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/10 20:10:58 by rtiutiun          #+#    #+#             */
-/*   Updated: 2017/10/07 22:29:39 by rtiutiun         ###   ########.fr       */
+/*   Updated: 2017/09/21 20:11:00 by rtiutiun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,8 @@ static char	*ft_strndup(const char *s1, int n)
 	if (!dst)
 		return (0);
 	p = dst;
-	while (*s1 && n > 0)
-	{
+	while (*s1 && n-- > 0)
 		*p++ = *s1++;
-		n--;
-	}
 	*p = 0;
 	return (dst);
 }
@@ -43,11 +40,10 @@ char		*ft_strtrim(char const *s)
 		return (NULL);
 	l = ft_strlen(s);
 	while (ws(s[l - 1]))
-		--l;
-	while (*s && ws(*s))
-	{
-		s++;
 		l--;
-	}
+	if (!l)
+		return (ft_strdup(""));
+	while (*s && ws(*s++))
+		l--;
 	return (ft_strndup(s, l));
 }
