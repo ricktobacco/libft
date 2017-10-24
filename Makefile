@@ -3,7 +3,7 @@ NAME = libft.a
 
 INCLUDE = libft.h
 
-CFLAGS = -Wall -Werror -Wextra -I$(INCLUDE)
+CFLAGS = -Wall -Werror -Wextra -j8 -I./$(INCLUDE)
 
 SRC = ./ft_lstnew.c \
 ./ft_lstmap.c \
